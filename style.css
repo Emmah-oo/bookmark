@@ -358,7 +358,7 @@ hr {
 
 .card-2 {
   margin: 40px 0;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 .card-2:hover {
@@ -367,7 +367,7 @@ hr {
 
 .card-3 {
   margin-top: 100px;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 .card-3:hover {
@@ -510,31 +510,31 @@ input {
 
 .invalid-email {
   border: 1px solid hsl(0, 94%, 66%);
-  transition: all .2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .valid-email {
   border: none;
-  transition: all .2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .verification {
   opacity: 0;
-  transition: all .2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .verification-active {
   opacity: 1;
   border: 1px solid hsl(0, 94%, 66%);
   padding: 5px 0;
-  font-size: .6rem;
+  font-size: 0.6rem;
   width: 90%;
   margin: auto;
   margin-bottom: 10px;
   border-radius: 5px;
   background-color: hsl(0, 94%, 66%);
   color: #fff;
-  transition: all .2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .submit {
@@ -677,30 +677,34 @@ footer .container {
 }
 
 @media (max-width: 850px) {
+  body {
+    overflow-x: hidden;
+  }
   .nav-links {
     position: absolute;
     right: 0;
     height: 100vh;
     width: 100%;
     background-color: rgba(27, 25, 25, 0.95);
+    backdrop-filter: blur(10px);
     top: 0;
     flex-direction: column;
     z-index: 1;
     color: #fff;
-    opacity: 0;
-    transition: opacity 0.3s ease-in;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-in;
     justify-content: center;
     align-items: center;
   }
 
   .active {
-    opacity: 1;
+    transform: translateX(0);
+    transition: transform 0.4s ease-in;
   }
 
   .toggle .line-1 {
     transform: rotate(-46deg) translate(-3px, 3px);
     background-color: #fff;
-    
   }
 
   .toggle .line-2 {
@@ -720,7 +724,7 @@ footer .container {
 
   .login {
     display: block;
-    padding: 20px 200px;
+    padding: 5px 200px;
     font-size: 1.5rem;
     border: 2px solid #fff;
     background-color: transparent;
@@ -764,7 +768,7 @@ footer .container {
 
   .burger {
     display: block;
-    
+
     position: absolute;
     top: 5%;
     right: 7%;
@@ -820,7 +824,7 @@ footer .container {
   .form {
     display: grid;
     grid-template-columns: 1fr;
-    gap: .5rem;
+    gap: 0.5rem;
     justify-items: center;
   }
 
@@ -907,6 +911,10 @@ footer .container {
   .showcase-img::before {
     width: 300px;
     height: 220px;
+  }
+
+  .showcase-text {
+    width: 85%;
   }
 
   .buttons {
